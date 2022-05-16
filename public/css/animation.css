@@ -1,0 +1,11 @@
+.deleteani:hover {
+    animation: headShake 1s;
+}
+
+.editani:hover {
+    animation: pulse 1s;
+}
+
+.replyani:hover {
+    animation: rotateInDownRight 1s;
+}
