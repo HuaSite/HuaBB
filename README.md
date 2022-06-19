@@ -25,7 +25,7 @@ Ubuntuの場合は
 
 ```Ubuntu
 sudo add-apt-repository ppa:ondrej/php
-sudo apt install -y php8.0 php8.0-intl php8.0-mysql php8.0-sqlite3 php8.0-gd php8.0-dom
+sudo apt install -y php php-mysql php-sqlite3 php-gd php-dom zip unzip openssl libcurl4-openssl-dev libssl-dev php-curl
 ```
 
 でインストールできます
