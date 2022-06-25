@@ -15,10 +15,20 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 use php_user_filter;
 
-use function PHPUnit\Framework\returnSelf;
-
 class PostController extends Controller
 {
+    // ユーザーの番号のID
+    public function id()
+    {
+        return Auth::id();
+    }
+
+    // ユーザ情報
+    public function user()
+    {
+        return Auth::user();
+    }
+
     // ホーム画面を表示
     public function index()
     {
@@ -34,10 +44,11 @@ class PostController extends Controller
     // 投稿を保存
     public function store(Request $request)
     {
-        $ids = Auth::id();
-        $user_avatar = Auth::user()->avatar;
-        $username = Auth::user()->name;
-        $user_idname = Auth::user()->user_id;
+        $ids = PostController::id();
+        $user = PostController::user();
+        $user_avatar = $user->avatar;
+        $username = $user->name;
+        $user_idname = $user->user_id;
         // everyoneのチェックの有無を獲得
         if ($request->everyone == true) {
             $everyone = 1;
@@ -113,7 +124,7 @@ class PostController extends Controller
     public function destroy($id)
     {
         $post = Post::findOrFail($id);
-        $idu = Auth::id();
+        $idu = PostController::id();
         if (auth()->user()->id != $post->user_id) {
             session()->flash('error', '他人の投稿を削除することはできないよ？');
             return redirect(request()->header('Referer'));
@@ -147,7 +158,7 @@ class PostController extends Controller
     // 投稿のいいねを解除する
     public function postunlike(Request $request)
     {
-        $user = Auth::id();
+        $user = PostController::id();
         $like = LikePost::where('post_id', $request->post_id)->where('user_id', $user)->first();
         if (is_null($like)) {
             session()->flash('success', 'すでにいいね解除されています！');
@@ -163,7 +174,8 @@ class PostController extends Controller
     // リプライを投稿
     public function replystore(Request $request)
     {
-        $ids = Auth::id();
+        $ids = PostController::id();
+        $user = PostController::user();
         $user_avatar = Auth::user()->avatar;
         $username = Auth::user()->name;
         $user_idname = Auth::user()->user_id;
@@ -223,7 +235,7 @@ class PostController extends Controller
     public function replydestroy($id)
     {
         $rep = Reply::findOrFail($id);
-        $idu = Auth::id();
+        $idu = PostController::id();
         if (auth()->user()->id != $rep->user_id) {
             session()->flash('deleteerror', '他人の返信を削除することはできないよ？');
             return redirect()->route('index');
@@ -237,14 +249,14 @@ class PostController extends Controller
     // マイページを表示
     public static function mypage()
     {
-        $id = Auth::id();
-        $user = Auth::user();
+        $id = PostController::id();
+        $user = PostController::user();
         return view('posts.mypage', [$id, 'user' => $user]);
     }
     // アイコン画像を更新
     public function myprofile(Request $request)
     {
-        $user_id = Auth::id();
+        $user_id = PostController::id();
         $databaseinsert = User::where('id', $user_id)->first();
         $postinserts = Post::where('user_id', $user_id)->get();
         $replyinserts = Reply::where('user_id', $user_id)->get();
@@ -273,7 +285,7 @@ class PostController extends Controller
     // プロフィールを編集
     public function profiletextupdate(Request $request)
     {
-        $id = Auth::id();
+        $id = PostController::id();
         $user = User::findOrFail($id);
         $user->profile = $request->profile;
         $user->save();
@@ -307,7 +319,7 @@ class PostController extends Controller
     // 通知を表示
     public function notice()
     {
-        $id = Auth::id();
+        $id = PostController::id();
         $user = User::findOrFail($id);
         return view('posts.notice', [$id, 'user' => $user]);
     }
