@@ -13,5 +13,5 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
-/public/file/profile/
+/public/file/profile/*
 !/public/file/profile/default.png
