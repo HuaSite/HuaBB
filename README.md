@@ -163,6 +163,9 @@ Trumbowyg(https://alex-d.github.io/Trumbowyg/)
 アイコン
 https://icon-rainbow.com
 
+Discordサーバー
+https://discord.gg/yM8BNXuwDB
+
 ## ChangeLog
 
 ```changelog
