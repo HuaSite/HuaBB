@@ -1,5 +1,10 @@
 # HuaBB
 
+Discordサーバー
+https://discord.gg/yM8BNXuwDB
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qWzriK8-cIU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <img src="public/site/HuaBB.svg" alt="HuaBB" style="zoom:50%;" />
 
 この素敵なアイコンは夜の無意識さんが書いてくれました！
@@ -162,9 +167,6 @@ Trumbowyg(https://alex-d.github.io/Trumbowyg/)
 
 アイコン
 https://icon-rainbow.com
-
-Discordサーバー
-https://discord.gg/yM8BNXuwDB
 
 ## ChangeLog
 
