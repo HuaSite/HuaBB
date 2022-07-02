@@ -15,3 +15,4 @@ yarn-error.log
 /.vscode
 /public/file/profile/*
 !/public/file/profile/default.png
+/public/file/*
