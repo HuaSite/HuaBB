@@ -25,17 +25,17 @@
         <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
             <div>
                 <p class="text-sm text-gray-700 leading-5">
-                    {!! __('Showing') !!}
                     @if ($paginator->firstItem())
-                        <span class="font-medium">{{ $paginator->firstItem() }}</span>
-                        {!! __('to') !!}
-                        <span class="font-medium">{{ $paginator->lastItem() }}</span>
+                        <span class="font-bold">{{ $paginator->firstItem() }}</span>
+                        <span>から</span>
+                        <span class="font-bold">{{ $paginator->lastItem() }}</span>
+                        <span>ページ</span>
                     @else
                         {{ $paginator->count() }}
                     @endif
-                    {!! __('of') !!}
-                    <span class="font-medium">{{ $paginator->total() }}</span>
-                    {!! __('results') !!}
+                    <span>|</span>
+                    <span class="font-bold ">{{ $paginator->total() }}</span>
+                    <span>ページ</span>
                 </p>
             </div>
 

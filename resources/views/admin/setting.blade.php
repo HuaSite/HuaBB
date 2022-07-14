@@ -14,52 +14,47 @@
                         <div class="mb-2">
                             <p class="font-bold">ユーザの権限設定</p>
                             <hr class="mx-4 my-2">
-                            <div class="overflow-y-auto max-h-96">
-                                <div id="infinite_scroll">
-                                    @forelse ($users as $user)
-                                    <div class="mb-2 flex items-center">
-                                        <a href="{{ route('profile', ['id' => $user->user_id]) }}"
-                                            class="flex items-center mr-10">
-                                            <span><img
-                                                    src="{{ asset('file/profile/' . $user->id . '/' . $user->avatar) }}"
-                                                    class="rounded-full" width="50" height="50"></span>
-                                            <span class="link link-hover link-primary">{{ $user->name }}</span></a>
-                                        <span>
-                                            <p class="font-bold">権限</p>
-                                            @can('admin')
-                                            <div>
-                                                {{ Form::radio("$user->id", '0', (old('role') == '0' ? true :
-                                                $user->role ==
-                                                '0') ?
-                                                true : false, ['class' => 'radio-button__input']) }}
-                                                <label class="text-yellow-400">管理者(admin)</label>
-                                            </div>
-                                            @endcan
-                                            @can('owner')
-                                            <div>
-                                                {{ Form::radio("$user->id", '1', (old('role') == '1' ? true :
-                                                $user->role ==
-                                                '1') ?
-                                                true : false, ['class' => 'radio-button__input']) }}
-                                                <label class="text-red-600">オーナー(owner)</label>
-                                            </div>
-                                            @endcan
-                                            @can('user')
-                                            <div>
-                                                {{ Form::radio("$user->id", '2', (old('role') == '2' ? true :
-                                                $user->role ==
-                                                '2') ?
-                                                true : false, ['class' => 'radio-button__input']) }}
-                                                <label class="text-blue-300">ユーザー(user)</label>
-                                            </div>
-                                            @endcan
-                                        </span>
+                            @forelse ($users as $user)
+                            <div class="mb-2 flex items-center">
+                                <a href="{{ route('profile', ['id' => $user->user_id]) }}"
+                                    class="flex items-center mr-10">
+                                    <span><img src="{{ asset('file/profile/' . $user->id . '/' . $user->avatar) }}"
+                                            class="rounded-full" width="50" height="50"></span>
+                                    <span class="link link-hover link-primary">{{ $user->name }}</span></a>
+                                <span>
+                                    <p class="font-bold">権限</p>
+                                    @can('admin')
+                                    <div>
+                                        {{ Form::radio("$user->id", '0', (old('role') == '0' ? true :
+                                        $user->role ==
+                                        '0') ?
+                                        true : false, ['class' => 'radio-button__input']) }}
+                                        <label class="text-yellow-400">管理者(admin)</label>
                                     </div>
-                                    @empty
-                                    @endforelse
-                                    {{ $users->links() }}
-                                </div>
+                                    @endcan
+                                    @can('owner')
+                                    <div>
+                                        {{ Form::radio("$user->id", '1', (old('role') == '1' ? true :
+                                        $user->role ==
+                                        '1') ?
+                                        true : false, ['class' => 'radio-button__input']) }}
+                                        <label class="text-red-600">オーナー(owner)</label>
+                                    </div>
+                                    @endcan
+                                    @can('user')
+                                    <div>
+                                        {{ Form::radio("$user->id", '2', (old('role') == '2' ? true :
+                                        $user->role ==
+                                        '2') ?
+                                        true : false, ['class' => 'radio-button__input']) }}
+                                        <label class="text-blue-300">ユーザー(user)</label>
+                                    </div>
+                                    @endcan
+                                </span>
                             </div>
+                            @empty
+                            @endforelse
+                            {{ $users->links() }}
                         </div>
                         <button type="submit" class="btn">更新</button>
                         <hr class="mx-4 my-2">
