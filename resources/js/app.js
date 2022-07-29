@@ -7,7 +7,6 @@ window.Alpine = Alpine;
 Alpine.start();
 
 require("@tailwindcss/typography");
-require('drawingboard.js');
 require('trumbowyg');
 require('jquery-resizable-dom');
 require('trumbowyg/dist/plugins/base64/trumbowyg.base64.min.js');

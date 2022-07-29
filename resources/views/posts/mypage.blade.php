@@ -60,17 +60,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div tabindex="0"
-                                class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
-                                <input type="checkbox">
-                                <div class="collapse-title text-xl text-center font-medium">ペイントを表示</div>
-                                <h4 class="text-center">ダウンロードしてpngにして貼り付けて使ってください</h4>
-                                <div class="collapse-content">
-                                    <div class="overflow-x-auto" style="height: 29rem;">
-                                        <div id="paint"></div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="p-3">
                                 <button type="submit" class="btn">変更</button>
                             </div>
