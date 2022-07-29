@@ -18,13 +18,13 @@ use php_user_filter;
 class PostController extends Controller
 {
     // ユーザーの番号のID
-    public function id()
+    public static function id()
     {
         return Auth::id();
     }
 
     // ユーザ情報
-    public function user()
+    public static function user()
     {
         return Auth::user();
     }

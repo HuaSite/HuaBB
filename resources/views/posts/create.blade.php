@@ -25,19 +25,6 @@
                             @endcan
                             <h2>本文</h2>
                             <textarea id="huabbbody" name="body"></textarea>
-                            <div tabindex="0"
-                                class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
-                                <input type="checkbox">
-                                <div class="collapse-title text-xl font-medium text-center">
-                                    <h2>ペイント</h2>
-                                </div>
-                                <h4 class="text-center">ダウンロードしてpngにして貼り付けて使ってください</h4>
-                                <div class="collapse-content">
-                                    <div class="overflow-x-auto" style="height: 29rem;">
-                                        <div id="paint"></div>
-                                    </div>
-                                </div>
-                            </div>
                             <h2>ファイル</h2>
                             <div class="non-prose">
                                 <input type="file" class="input" name="file" id="file">

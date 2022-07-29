@@ -16,19 +16,6 @@
                                 name="title" rows="1" placeholder="タイトル" value="{{ $post->title }}" />
                             <h3>本文</h3>
                             <textarea id="huabbbody" name="body">{{ $post->body }}</textarea>
-                            <div tabindex="0"
-                                class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
-                                <input type="checkbox">
-                                <div class="collapse-title text-xl font-medium text-center">
-                                    <h2>ペイント</h2>
-                                </div>
-                                <h4 class="text-center">ダウンロードしてpngにして貼り付けて使ってください</h4>
-                                <div class="collapse-content">
-                                    <div class="overflow-x-auto" style="height: 29rem;">
-                                        <div id="paint"></div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="text-center mt-3">
                                 <input name="post_id" type="hidden" value="{{ $post->id }}">
                                 <x-button type="submit" class="btn btn-primary col-md-5">変更する</x-button>
