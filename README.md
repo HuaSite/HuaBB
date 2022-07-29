@@ -77,7 +77,22 @@ https://nodejs.org/en/download/
 
 でnpmをインストールします。
 
-そうしたら、HuaBBのディレクトリで
+gitもインストールしてください。
+
+```
+sudo apt install git
+```
+
+
+HuaBBのダウンロードは、
+
+```
+git clone https://github.com/HuaSite/HuaBB.git
+```
+
+をインストールする環境のディレクトリで実行してください。
+
+そうしたら、HuaBBのディレクト(cd HuaBB)で
 
 ```npm
 npm run dev && composer install
