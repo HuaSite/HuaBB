@@ -8,8 +8,6 @@ https://discord.gg/yM8BNXuwDB
 この素敵なアイコンは夜の無意識さんが書いてくれました！
 ありがとうございます！
 
-[![](https://img.youtube.com/vi/qWzriK8-cIU/0.jpg)](https://www.youtube.com/watch?v=qWzriK8-cIU)
-
 **※初心者なのででたらめぐちゃぐちゃコードでエラー多発なのはお許しください**
 
 ※あと、mdファイル書いたことないのでよくわかんないことになってると思います()
