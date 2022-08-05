@@ -64,6 +64,20 @@
                                 <button type="submit" class="btn">変更</button>
                             </div>
                         </form>
+                        <div class="not-prose">
+                            <form action="{{ route('nameidchange') }}" method="POST">
+                                @csrf
+                                <p class="text-green-400 font-bold">名前変更</p>
+                                <input type="text" class="input input-bordered" name="name_change" value="{{ $user->name }}"
+                                    required />
+                                <p class="text-green-400 font-bold">id変更</p>
+                                <input type="text" class="input input-bordered" name="user_id_change" value="{{ $user->user_id }}"
+                                    required />
+                                <div>
+                                    <button class="btn">変更</button>
+                                </div>
+                            </form>
+                        </div>
                         <p class="text-cyan-300 font-bold">あなたの投稿</p>
                         <livewire:mypage-list />
                     </article>

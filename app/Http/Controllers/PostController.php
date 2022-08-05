@@ -253,6 +253,43 @@ class PostController extends Controller
         $user = PostController::user();
         return view('posts.mypage', [$id, 'user' => $user]);
     }
+    // ユーザー名とIDを変更
+    public static function nameidchange(Request $request)
+    {
+        $user_idname = $request->name_change;
+        $user_id = $request->user_id_change;
+
+        $user = PostController::user();
+        
+
+        if($user_id != $user->user_id)
+        {
+            $user->user_id = $user_id;
+            $user->save();
+            session()->flash('success', 'ユーザーIDを変更しました');
+            return redirect(request()->header('Referer'));
+        }
+        elseif($user_idname != $user->name)
+        {
+            $user->name = $user_idname;
+            $user->save();
+            session()->flash('success', 'ユーザー名を変更しました');
+            return redirect(request()->header('Referer'));
+        }
+        elseif($user_idname != $user->name || $user_id != $user->user_id)
+        {
+            $user->user_id = $user_id;
+            $user->name = $user_idname;
+            $user->save();
+            session()->flash('success', 'ユーザー名とユーザーIDを変更しました');
+            return redirect(request()->header('Referer'));
+        }
+        else
+        {
+            session()->flash('info', 'ユーザー名とユーザーIDどちらとも変更されませんでした');
+            return redirect(request()->header('Referer'));
+        }
+    }
     // アイコン画像を更新
     public function myprofile(Request $request)
     {

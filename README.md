@@ -183,6 +183,19 @@ Trumbowyg(https://alex-d.github.io/Trumbowyg/)
 アイコン
 https://icon-rainbow.com
 
+
+### その他使用したjavascript系ライブラリ
+
+
+animate.css<br>https://animate.style
+
+daisyui<br>https://daisyui.com
+
+sweetalert2<br>https://sweetalert2.github.io
+
+toastr<br>https://codeseven.github.io/toastr/
+
+
 ## ChangeLog
 
 ```changelog
@@ -306,5 +319,7 @@ Beta1.32.1: リロードボタンを改良、サイドバーにユーザ名、�
 2022年6月25日:
 Beta1.32.2: コントローラーを修正？
 2022年7月14日:
-beta1.32.3: ページめくりのデザインを改良
+Beta1.32.3: ページめくりのデザインを改良
+2022年8月5日:
+Beta1.34: ユーザーIDとユーザ名が変更できるように
 ```

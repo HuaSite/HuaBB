@@ -40,6 +40,7 @@ Route::post('/replyedit', 'PostController@replyupdate')->middleware('auth')->nam
 Route::post('/replydelete/{id}', 'PostController@replydestroy')->middleware('auth')->name('replydestroy');
 Route::post('/mypage/profileupdate', 'PostController@myprofile')->middleware('auth')->name('myprofile');
 Route::post('/mypage/profiletextupdate', 'PostController@profiletextupdate')->middleware('auth')->name('profiletextupdate');
+Route::post('/mypage/nameidchange', 'PostController@nameidchange')->middleware('auth')->name('nameidchange');
 
 // DM
 
