@@ -14,48 +14,48 @@
 
             <!-- Name -->
             <div>
-                <x-label for="name" :value="__('名前')" />
+                <label for="name">名前</label>
 
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required
+                <input id="name" class="block mt-1 w-full input input-bordered" type="text" name="name" :value="old('name')" required
                     autofocus />
             </div>
 
             <!-- User ID -->
             <div class="mt-4">
-                <x-label for="user_id" :value="__('ユーザーID')" />
+                <label for="user_id">ユーザーID</label>
 
-                <x-input id="user_id" class="block mt-1 w-full" type="text" name="user_id" :value="old('user_id')"
+                <input id="user_id" class="block mt-1 w-full input input-bordered" type="text" name="user_id" :value="old('user_id')"
                     required />
             </div>
 
             <!-- Password -->
             <div class="mt-4">
-                <x-label for="password" :value="__('パスワード')" />
+                <label for="password">パスワード</label>
 
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required
+                <input id="password" class="block mt-1 w-full input input-bordered" type="password" name="password" required
                     autocomplete="new-password" />
             </div>
 
             <!-- Confirm Password -->
             <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('パスワード(もう一度)')" />
+                <label for="password_confirmation">パスワード(もう一度)</label>
 
-                <x-input id="password_confirmation" class="block mt-1 w-full" type="password"
+                <input id="password_confirmation" class="block mt-1 w-full input input-bordered" type="password"
                     name="password_confirmation" required />
             </div>
 
             <div class="mt-4">
-                <x-label for="avatar" :value="__('プロフィール画像(正方形で)')"/>
-                <x-input id="avatar" class="block mt-1 w-full @error('avatar') is-invalid @enderror" type="file" name="avatar"/>
+                <label for="avatar">プロフィール画像(正方形で)</label>
+                <input id="avatar" class="block mt-1 w-full @error('avatar') is-invalid @enderror input" type="file" name="avatar"/>
             </div>
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('登録してある？') }}
+                    登録してある？
                 </a>
 
-                <x-button class="ml-4">
-                    {{ __('登録！') }}
-                </x-button>
+                <button class="ml-4 btn">
+                    登録！
+                </button>
             </div>
         </form>
     </x-auth-card>
