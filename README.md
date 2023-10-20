@@ -3,8 +3,9 @@
 Discordサーバー
 https://discord.gg/yM8BNXuwDB
 
-テストページ
-https://huabb.huasite.shop
+~~テストページ
+https://huabb.huasite.shop~~
+追記: ドメイン切れたのでこのサイトはアクセスできません。
 
 <img src="public/site/HuaBB.svg" alt="HuaBB" style="zoom:50%;" />
 
