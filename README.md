@@ -1,8 +1,5 @@
 # HuaBB
 
-Discordサーバー
-https://discord.gg/yM8BNXuwDB
-
 <img src="public/site/HuaBB.svg" alt="HuaBB" style="zoom:50%;" />
 
 この素敵なアイコンは夜の無意識さんが書いてくれました！
